@@ -1,0 +1,9 @@
+.usercard
+{
+    display: inline-block;
+    align-content: center;
+    width: 18rem;
+
+  padding: 5px;
+    border: 2px 
+}
