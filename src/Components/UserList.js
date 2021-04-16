@@ -1,7 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { Card, Button, Image } from "react-bootstrap";
 import history from './../history';
-import "./UserList.css";
+import "./UserComponent.css";
 import {DataInfoContext, DataDispatchContext} from "../Context/DataContext";
 
 function UserList() {
@@ -17,7 +17,7 @@ const handleClick = (e) => {
     return (<div>
         {data ? (data.results.map((el, i) => {
             return (
-                <div className="usercard">
+                <div className="usercard" key={i}>
                     <Card>
                         <Image src={el.picture.large} roundedCircle />
                         <Card.Body>
