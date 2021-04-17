@@ -1,8 +1,14 @@
 import { useContext } from "react";
 import { DataProfileContext } from "../Context/DataContext";
-import { Card, Image } from "react-bootstrap";
+import history from './../history';
+import { Card, Image, Button } from "react-bootstrap";
 function UserDetails() {
     const profileDetails = useContext(DataProfileContext)
+    const handleClick = (e) => {
+        e.preventDefault();
+        history.push(`/`)
+    }
+
     return (<div className="userDetails">
         <Card className="text-center">
             <Image className="userImg" src={profileDetails.picture.large} roundedCircle ></Image>
@@ -15,9 +21,10 @@ function UserDetails() {
                     Call me at: Phone: {profileDetails.phone} / Cell: {profileDetails.cell}
                 </Card.Text>
             </Card.Body>
-            <Card.Footer className="text-muted">Feel free to reach out to me at: {profileDetails.email}</Card.Footer>
+            <Card.Footer className="text-muted">Feel free to reach out to me at: {profileDetails.email}
+            </Card.Footer>
+            <Button variant="secondary"onClick={handleClick} size="sm">Back to Profiles</Button>
         </Card>
-
     </div>)
 }
 
