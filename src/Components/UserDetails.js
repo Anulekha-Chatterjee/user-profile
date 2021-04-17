@@ -15,7 +15,7 @@ function UserDetails() {
                     Call me at: Phone: {profileDetails.phone} / Cell: {profileDetails.cell}
                 </Card.Text>
             </Card.Body>
-            <Card.Footer className="text-muted">Feel free to reach out to me at {profileDetails.email}</Card.Footer>
+            <Card.Footer className="text-muted">Feel free to reach out to me at: {profileDetails.email}</Card.Footer>
         </Card>
 
     </div>)

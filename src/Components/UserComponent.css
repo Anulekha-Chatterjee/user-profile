@@ -1,11 +1,10 @@
 .usercard
 {
-    display: inline-block;
-    align-content: center;
-    width: 18rem;
-
+  display: inline-block;
+  align-content: center;
+  width: 18rem;
   padding: 5px;
-    border: 2px 
+  border: 2px 
 }
 
 .userDetails
@@ -16,7 +15,7 @@
 
 .userImg
 {
-  align-self: center;
+align-self: center;
 width: 18rem;
 height: 20rem;
 }
