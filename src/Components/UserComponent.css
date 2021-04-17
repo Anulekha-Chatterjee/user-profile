@@ -14,3 +14,9 @@
   margin: 20px;
 }
 
+.userImg
+{
+  align-self: center;
+width: 18rem;
+height: 20rem;
+}

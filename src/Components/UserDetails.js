@@ -1,22 +1,23 @@
 import { useContext } from "react";
-import {DataProfileContext} from "../Context/DataContext";
-import { Image } from "react-bootstrap";
-function UserDetails()
-{
+import { DataProfileContext } from "../Context/DataContext";
+import { Card, Image } from "react-bootstrap";
+function UserDetails() {
     const profileDetails = useContext(DataProfileContext)
-    return (<div className= "userDetails">
-        <Image className="userImg" src= {profileDetails.picture.large} rounded ></Image>
-        <h1>Hello, I am {profileDetails.name.first} {profileDetails.name.last}</h1>
-        <p>I live in {profileDetails.location.city}, {profileDetails.location.country} </p>
-        <p>Feel free to reach out to me at {profileDetails.email}</p>
-        <div>You can also call me at: <ul>
-            <li>
-                {profileDetails.phone}
-            </li>
-            <li>
-                {profileDetails.cell}
-            </li>
-            </ul></div>
+    return (<div className="userDetails">
+        <Card className="text-center">
+            <Image className="userImg" src={profileDetails.picture.large} roundedCircle ></Image>
+            <Card.Body>
+                <Card.Title>Hello, I am {profileDetails.name.first} {profileDetails.name.last}</Card.Title>
+                <Card.Text>
+                    I live in {profileDetails.location.city}, {profileDetails.location.country}
+                </Card.Text>
+                <Card.Text>
+                    Call me at: Phone: {profileDetails.phone} / Cell: {profileDetails.cell}
+                </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-muted">Feel free to reach out to me at {profileDetails.email}</Card.Footer>
+        </Card>
+
     </div>)
 }
 
