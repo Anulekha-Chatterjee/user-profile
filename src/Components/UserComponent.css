@@ -3,14 +3,14 @@
   display: inline-block;
   align-content: center;
   width: 18rem;
-  padding: 5px;
-  border: 2px 
+  padding: 0.5rem;
+  border: 2rem 
 }
 
 .userDetails
 {
   align-content: center;
-  margin: 20px;
+  margin: 2rem;
 }
 
 .userImg
